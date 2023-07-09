@@ -7,15 +7,15 @@ import (
 	"text/template"
 )
 
-const mdTmpl = `{{range $sIdx, $s := .}}## <a id="{{$sIdx}}">Section{{$sIdx}}</a>  
+const mdTmpl = `{{range $sIdx, $s := .}}### <a id="{{$sIdx}}">Section{{$sIdx}}</a>  
 {{range $tIdx, $t := .Topics}}[Section{{$sIdx}}-Topic{{$tIdx}}](#{{$sIdx}}.{{$tIdx}})  
 {{end}}
 {{end}}
-{{range $sIdx, $s := .}}## Section{{$sIdx}}  
+{{range $sIdx, $s := .}}### Section{{$sIdx}}  
 
 {{range $tIdx, $t := .Topics}}---  
 
-### <a id="{{$sIdx}}.{{$tIdx}}">Section{{$sIdx}}-Topic{{$tIdx}}</a>  
+#### <a id="{{$sIdx}}.{{$tIdx}}">Section{{$sIdx}}-Topic{{$tIdx}}</a>  
 
 {Place for topic content}  
 
