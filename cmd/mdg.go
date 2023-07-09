@@ -47,5 +47,6 @@ func Execute() {
 func init() {
 	mdgCmd.Flags().IntVarP(&nOfS, "nofs", "s", 1, "number of sections in MD template")
 	mdgCmd.Flags().IntVarP(&nOfT, "noft", "t", 1, "number of topics in each section")
-	mdgCmd.Flags().StringVarP(&file, "tofile", "f", "", "name of file to write MD template")
+	mdgCmd.Flags().StringVarP(&file, "tofile", "f", "",
+		"filename to write result (if no file is specified, the MD template will be written to stdout)")
 }
